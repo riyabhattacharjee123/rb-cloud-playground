@@ -1,0 +1,26 @@
+# 1) Make sure you’re on your working branch
+git status
+git branch
+
+# If your branch name isn't exactly 'Main', switch or rename it:
+# git checkout Main
+# or if your local branch is 'main', rename it to match remote:
+# git branch -M Main
+
+# 2) Pull remote commits and replay your local commits on top
+git pull --rebase origin Main
+
+# If you see conflicts:
+#   - VS Code will show them in the editor
+#   - Fix the files, then:
+# git add <fixed-file(s)>
+# git rebase --continue
+
+# 3) Push the result back up
+git push origin HEAD:Main
+
+git fetch
+git pull
+git add
+git commit -m ""
+git push
